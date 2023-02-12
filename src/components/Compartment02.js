@@ -20,7 +20,7 @@ function Compartment02() {
                         </div>
                     </div>
                     <div className="compartment02_general compartment02_button">
-                        <Button value="Continue"/>
+                        <Button value="Get Started  > "/>
                     </div>
                 </div>
             </div>

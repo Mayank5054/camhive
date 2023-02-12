@@ -94,15 +94,15 @@ display: flex;
     animation-fill-mode: both;
   }
   .loading_dots:nth-child(1){
-    animation: bouncing_balls 1.5s linear 0s infinite forwards;
+    animation: bouncing_balls 1.2s linear 0s infinite forwards;
     background:#45215D;
   }
   .loading_dots:nth-child(2){
-    animation: bouncing_balls 1.5s linear 1s infinite forwards;
+    animation: bouncing_balls 1.2s linear 0.2s infinite forwards;
     background:#7A3064;
   }
   .loading_dots:nth-child(3){
-    animation: bouncing_balls 1.5s linear 1.2s infinite forwards;
+    animation: bouncing_balls 1.2s linear 0.4s infinite forwards;
     background: #944379;
   }
   .compartment02{

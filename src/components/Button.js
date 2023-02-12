@@ -6,6 +6,7 @@ export default function Button() {
     <div className='button'>
         
     </div>
+    <div>Button</div>
     </>
   )
 }

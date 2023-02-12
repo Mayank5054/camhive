@@ -1,0 +1,144 @@
+.home01_main_container{
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+     background:#f4f1f1;
+  }
+  .compartment01{
+    height:100%;
+    width:25%;
+background:white;
+box-shadow:0px 0px 10px black;
+display: flex;
+  }
+  .compartment01_subpart01{
+ height:100%;
+ width:100%;
+ 
+ display: flex;
+ flex-direction: column;
+
+  }
+  .compartment01_subpart02{
+    height:93%;
+    width:100%;
+    
+    display: flex;
+    flex-direction: column;
+   align-items: flex-center;
+   justify-content:center;
+     }
+  .home01_logo{
+    height:20%;
+    width:80%;
+    
+    align-self: center;
+    text-align: center;
+  }
+  .home01_logo > p{
+    font-size:1.2vw;
+    letter-spacing: 1px;
+
+    /* font-family:'Jost',; */
+    font-weight:700;
+    color:#45215D;
+   
+    margin: 0%;
+    padding:0%;
+  }
+  .loading_dots_div{
+    height:7%;
+    width:100%;
+    /* background: #45215D; */
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+  }
+  .loading_dots_container{
+    height:100%;
+    width:25%;
+    /* background:yellow; */
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+  }
+  .loading_dots{
+    height:30%;
+    width:15%;
+    background:white; 
+    border-radius: 200px;
+  }
+  .loading_dots:nth-child(1){
+    background:#45215D;
+  }
+  .loading_dots:nth-child(2){
+    background:#7A3064;
+  }
+  .loading_dots:nth-child(3){
+    background: #944379;
+  }
+  .compartment02{
+    height:100%;
+    width:75%;
+    /* background:red; */
+  }
+  .compartment02_subpart01{
+    height:100%;
+    width:100%;
+    /* background:gold; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .compartment02_subpart02{
+    height:50%;
+    width:85%;
+    /* background:black; */
+    flex-direction: column;
+    padding: 0% 0.5% 0% 0.5%;
+  }
+  .compartment02_general{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .compartment02_title{
+     height:15%;
+     width:100%;
+     /* background:red; */
+     justify-content: flex-start;
+  }
+  .compartment02_title > p{
+    font-size: 2vw;
+    font-weight: 900;
+    color:#45215D;
+    padding:0;
+    margin:0;
+  } 
+  .compartment02_body{
+    height:70%;
+     width:100%;
+     /* background:blue; */
+  }
+  .temp{
+    height:100%;
+    width:100%;
+    /* background:chartreuse; */
+    justify-content: flex-start;
+  }
+  .temp > p{
+    font-size:1.1vw;
+    /* background:yellow; */
+    width:85%;
+    color:#944379;
+  }
+  .compartment02_button{
+    height:15%;
+     width:100%;
+     background:green;
+  }

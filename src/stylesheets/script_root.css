@@ -1,4 +1,16 @@
-.home01_main_container{
+
+@keyframes bouncing_balls {
+  0%{
+    transform:translate(0%,0%);
+  }
+  50%{
+    transform:translate(0%,-200%);
+  }
+  100%{
+    transform:translate(0%,0);
+  }
+  
+}.home01_main_container{
     height:100%;
     width:100%;
     display: flex;
@@ -72,14 +84,21 @@ display: flex;
     width:15%;
     background:white; 
     border-radius: 200px;
+    animation-name: bouncing_balls;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
   }
   .loading_dots:nth-child(1){
     background:#45215D;
   }
   .loading_dots:nth-child(2){
+    animation-delay:0.50s;
     background:#7A3064;
   }
   .loading_dots:nth-child(3){
+    animation-delay: 0.75s;
     background: #944379;
   }
   .compartment02{

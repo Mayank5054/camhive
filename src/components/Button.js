@@ -3,8 +3,9 @@ import React from 'react'
 export default function Button() {
   return (
     <>
-    <div>Button</div>
-    <div>kar chodu pull</div>
+    <div className='button'>
+        
+    </div>
     </>
   )
 }

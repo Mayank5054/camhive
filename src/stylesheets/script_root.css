@@ -171,5 +171,22 @@ display: flex;
   .compartment02_button{
     height:15%;
      width:100%;
-     background:green;
   }
+  /* button css starts  */
+  .btnInner{
+    /* border: 5px solid #45235e59; */
+    border: none;
+    padding: 1rem 3rem;
+    color: white;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right,#45235e,#cb69b7);
+    border-radius: 2rem;
+    transition: transform 0.4s ease-in-out;
+    font-weight: 700;
+    letter-spacing: 3px;
+    cursor: pointer;
+  }
+  .btnInner:hover{
+    transform: scale(1.1);
+  }
+  /* button css ends  */

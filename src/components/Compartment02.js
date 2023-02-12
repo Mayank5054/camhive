@@ -1,3 +1,4 @@
+import Button from "./Button"
 
 
 function Compartment02() {
@@ -19,6 +20,7 @@ function Compartment02() {
                         </div>
                     </div>
                     <div className="compartment02_general compartment02_button">
+                        <Button value="Continue"/>
                     </div>
                 </div>
             </div>

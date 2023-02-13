@@ -1,7 +1,15 @@
+import { useState } from "react"
 import Button from "./Button"
+import { useNavigate } from "react-router-dom";
 
 
 function Compartment02() {
+    const navigator = useNavigate();
+  
+    const Clicked = () => {
+        navigator("/Login")
+        
+    }
   return (
     <>
     <div className="compartment02">
@@ -20,7 +28,7 @@ function Compartment02() {
                         </div>
                     </div>
                     <div className="compartment02_general compartment02_button">
-                        <Button value="Get Started  > "/>
+                        <Button value="Get Started  > " funcCall={Clicked}/>
                     </div>
                 </div>
             </div>
@@ -30,3 +38,5 @@ function Compartment02() {
 }
 
 export default Compartment02
+
+

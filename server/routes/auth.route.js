@@ -11,4 +11,6 @@ authRoute.post('/createuser' ,
     createUser
 )
 
-module.exports = authRoute;
+module.exports = {
+    authRoute,
+}

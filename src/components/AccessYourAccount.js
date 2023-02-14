@@ -1,24 +1,24 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const AccessYourAccount = () => {
-  var [email,setEmail]=useState(null);
-  var [password,setPassword]=useState(null);
+  var [email, setEmail] = useState(null);
+  var [password, setPassword] = useState(null);
   const HandleSubmit = () => {};
   var inputRef = React.createRef();
-  const handleEmail = (e)=>{
+  const handleEmail = (e) => {
     setEmail(e.target.value);
-    if(e.target.value===""){
+    if (e.target.value === "") {
       setEmail(null);
     }
-  }
-  const handlePassword = (e)=>{
+  };
+  const handlePassword = (e) => {
     setPassword(e.target.value);
-    if(e.target.value===""){
+    if (e.target.value === "") {
       setPassword(null);
     }
-  }
+  };
   return (
     <div className="compartment02">
       <div className="compartment02_subpart01">
@@ -32,20 +32,39 @@ const AccessYourAccount = () => {
                 <div className="login_form_subpart">
                   <form onSubmit={HandleSubmit} id="form">
                     <div className="field_common email_field">
-                      <input type="email" className="email_input"  id="email_input" value={email} onChange={handleEmail}></input>
-                        {
-                          email === null && 
-                            <div className="placeholder_div" ref={inputRef} id="placeholder_email"><p>E-Mail Address</p></div>
-                        }
-                        
-                      
+                      <input
+                        type="email"
+                        className="email_input"
+                        id="email_input"
+                        value={email}
+                        onChange={handleEmail}
+                      ></input>
+                      {email === null && (
+                        <div
+                          className="placeholder_div"
+                          ref={inputRef}
+                          id="placeholder_email"
+                        >
+                          <p>E-Mail Address</p>
+                        </div>
+                      )}
                     </div>
                     <div className="field_common password_field">
-                      <input type="password" value={password} className="password_input" id="password_input" onChange={handlePassword}></input>
-                      {
-                        password === null && 
-                      <div className="placeholder_div_password" id="placeholder_password"><p>Password</p></div>
-}
+                      <input
+                        type="password"
+                        value={password}
+                        className="password_input"
+                        id="password_input"
+                        onChange={handlePassword}
+                      ></input>
+                      {password === null && (
+                        <div
+                          className="placeholder_div_password"
+                          id="placeholder_password"
+                        >
+                          <p>Password</p>
+                        </div>
+                      )}
                     </div>
                     <div className="field_common login_button">
                       <div className="captcha_div">
@@ -97,10 +116,7 @@ const AccessYourAccount = () => {
         </div>
       </div>
     </div>
-   
   );
-  
 };
 
 export default AccessYourAccount;
-

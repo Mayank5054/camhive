@@ -1,6 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
+import { faSwimmer } from "@fortawesome/free-solid-svg-icons";
+
+
+
+import GoogleLogin from "./GoogleLogin";
+const AccessYourAccount = () => {
+  const HandleSubmit = () => {};
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSwimmer } from "@fortawesome/free-solid-svg-icons";
 
@@ -51,6 +59,16 @@ const AccessYourAccount = () => {
                 <div className="login_form_subpart">
                   <form onSubmit={HandleSubmit} id="form">
                     <div className="field_common email_field">
+                      <input type="text" className="email_input"></input>
+                      <div className="placeholder_div">
+                        <p>E-Mail Address</p>
+                      </div>
+                    </div>
+                    <div className="field_common password_field">
+                      <input type="text" className="password_input"></input>
+                      <div className="placeholder_div_password">
+                        <p>Password</p>
+                      </div>
                       <input
                         type="email"
                         className="email_input"
@@ -85,7 +103,7 @@ const AccessYourAccount = () => {
                       )}
                     </div>
                     <div className="field_common login_button">
-                      <div className="captcha_div">
+                      <div class="captcha_div">
                         {/* captcha code should be added here */}
                       </div>
                       <div className="compartment02_general login_button_container">
@@ -110,13 +128,10 @@ const AccessYourAccount = () => {
               <div className="social_media_login">
                 <div className="social_media_login_subpart">
                   <div className="general_social_media google_login">
-                    <button className="google_button">
-                      <i className="fa fa-google"></i>
-                      <p>Login With Google</p>
-                    </button>
+                    <GoogleLogin />
                   </div>
                   <div className="general_social_media facebook_login">
-                    <button className="facebook_button">
+                    <button class="facebook_button">
                       <i className="fa fa-facebook"></i>
                       <p>Login With Facebook</p>
                     </button>
@@ -125,7 +140,7 @@ const AccessYourAccount = () => {
               </div>
             </div>
           </div>
-          <div className="ccc_button ccc_button_login">
+          <div className=" compartment02_button compartment02_button_login">
             <p>Oops ! Don't Have An Account ?</p>
             <Link to="/signup" id="link_for_signup">
               <p>&nbsp;Join Us Now</p>
@@ -136,5 +151,4 @@ const AccessYourAccount = () => {
     </div>
   );
 };
-
 export default AccessYourAccount;

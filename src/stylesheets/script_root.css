@@ -306,8 +306,9 @@ a{
   .compartment02_subpart02_login{
     height:75%;
     width:85%;
-   
-   
+  }
+  .cna{
+    letter-spacing: 2px;
   }
   .compartment02_general{
     display: flex;
@@ -343,7 +344,6 @@ a{
     height:100%;
     width:80%;
     display: flex;
-
     align-self: flex-start;
   }
   .temp{
@@ -450,15 +450,18 @@ a{
     align-items: center;
     justify-content: center;
   }
-  .field_common{
+  .field_common,.field_common_signup{
     height:28%;
     width:100%;
-    
+    /* background:teal; */
     display: flex;
     align-items: center;
     justify-self:flex-start;
   }
-  .email_field{
+  .field_common_signup{
+    height:25%;
+  }
+  .email_field,.email_field_signup{
     /* background:red; */
     display: flex;
     align-items: center;
@@ -475,11 +478,11 @@ a{
     justify-content: center;
     flex-direction: column;
   }
-  .email_input , .password_input{
+  .email_input , .email_input_signup,.password_input,.password_input_signup{
     height:47%;
     width:75%;
     border-radius: 7px;
-    box-shadow: 0px 1px 5px black;
+    box-shadow: 0px 1px 2px black;
     position:relative;
     font-size:17px;
     color:#45215D;
@@ -491,7 +494,11 @@ a{
     outline:none;
     border-width:0;
   }
-  .email_input:focus,.password_input:focus{
+  .email_input_signup,.password_input_signup{
+    height:60%;
+    letter-spacing: 1px;
+  }
+  .email_input:focus,.email_input_signup:focus,.password_input:focus,.passport_input_signup:focus{
     box-shadow: none;
     border:3px solid  #45235e;
     border-style: groove;
@@ -512,9 +519,10 @@ a{
     padding: 0%;
     /* background: yellow; */
     color:#45215D;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 1px;
-    word-spacing: 2px
+    word-spacing: 2px;
+    font-size:16px;
   }
  
   .placeholder_div_password > p{
@@ -522,10 +530,10 @@ a{
     padding: 0%;
     /* background: yellow; */
     color:#45215D;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 1px;
     word-spacing: 2px;
-    font-size:18px;
+    font-size:16px;
   }
   .captcha_div{
     height:40%;
@@ -539,16 +547,20 @@ a{
     /* background:firebrick; */
     justify-content: flex-start;
   }
-  .btn_login{
+  .btn_login,.btn_login_signup{
     height:75%;
-    width:80%;
+    width:75%;
     background-image: linear-gradient(45deg,#45235e 55%,#944379);
     border-radius: 0.32rem;
     color:white;
     border:none;
     font-size: 19px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+  }
+  .btn_login_signup{
+    height: 83%;
+    font-weight: 700;
   }
   .btn_login:hover{
     transform: scale(1.005);
@@ -631,7 +643,7 @@ a{
   justify-content: center;
   border-radius: 0.32rem;
   border:none;
-  box-shadow: 0px 1px 3px black;
+  box-shadow: 0px 1px 2px black;
   font-weight: 500;
  }
  .google_button > i,.facebook_button > i{
@@ -668,7 +680,7 @@ a{
   
  }
   
-  /* Access Your Account css ends  */
+  /* Access Your Account , Create a new account css ends  */
 
   /* otp page css starts  */
 .Otp_Page_main_container{

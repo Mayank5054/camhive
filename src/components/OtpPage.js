@@ -9,7 +9,7 @@ export default function OtpPage() {
                 <Compartment01 />
                 <div className="Otp_page_Inner">
                     <div className="Otp_page_title">
-                        <h2>Verify Account</h2>
+                        <h2 className="head">Verify Account</h2>
                     </div>
                     <div className="Otp_page_content">
                         <p>We will send you a One Time Password (OTP) on ypur email address</p>
@@ -27,7 +27,7 @@ export default function OtpPage() {
                         </div>
 
                     </div>
-                    <div className="Otp_page_end">
+                    <div className="goBackDiv">
                         <button>Go Back</button>
                     </div>
                 </div>

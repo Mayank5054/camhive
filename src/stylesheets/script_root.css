@@ -478,7 +478,7 @@
     height:47%;
     width:75%;
     border-radius: 7px;
-    box-shadow: 0px 1px 5px black;
+    box-shadow: 0px 1px 2px black;
     position:relative;
     font-size:17px;
     color:#45215D;
@@ -639,7 +639,7 @@
   justify-content: center;
   border-radius: 0.32rem;
   border:none;
-  box-shadow: 0px 1px 3px black;
+  box-shadow: 0px 1px 2px black;
   font-weight: 500;
  }
  .google_button > i,.facebook_button > i{

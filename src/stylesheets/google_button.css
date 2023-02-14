@@ -1,0 +1,43 @@
+.btn_google{
+    height:50px;
+    width:300px;
+    background:black;
+  padding:0px;
+  margin:0px;
+  border:none;
+  box-shadow: 0px 1px 10px black;
+  
+}
+.btn_div_google{
+    height:100%;
+    width:100%;
+    background:#1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subdiv01{
+    height:100%;
+    width:20%;
+    background:lavenderblush;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subdiv02{
+    height:100%;
+    width:80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#btn_i_google{
+    font-size:20px;
+}
+.btn_p_google{
+    font-family:"Tangerine";
+    font-size:15px;
+    letter-spacing: 1.2px;
+   
+   color:#6C6261;
+}

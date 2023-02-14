@@ -2,9 +2,50 @@ import React from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
+import { faSwimmer } from "@fortawesome/free-solid-svg-icons";
+
+
+
 import GoogleLogin from "./GoogleLogin";
 const AccessYourAccount = () => {
   const HandleSubmit = () => {};
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSwimmer } from "@fortawesome/free-solid-svg-icons";
+
+
+
+const AccessYourAccount = () => {
+
+
+  var [combine,setCombine]=useState({Email:null,Password:null});
+
+  const HandleSubmit = () => {
+
+  };
+  const handleEmail = (e) => {
+    setCombine({
+      ...combine,
+      Email:e.target.value
+    })
+    if (e.target.value === "") {
+      setCombine({
+        ...combine,
+        Email:null
+      })
+    }
+  };
+  const handlePassword = (e) => {
+    setCombine({
+      ...combine,
+      Password:e.target.value
+    })
+    if (e.target.value === "") {
+      setCombine({
+        ...combine,
+        Password:null
+      })
+    }
+  };
   return (
     <div className="compartment02">
       <div className="compartment02_subpart01">
@@ -28,6 +69,38 @@ const AccessYourAccount = () => {
                       <div className="placeholder_div_password">
                         <p>Password</p>
                       </div>
+                      <input
+                        type="email"
+                        className="email_input"
+                        id="email_input"
+                        value={combine.Email}
+                        onChange={handleEmail}
+                      ></input>
+                      {combine.Email === null && (
+                        <div
+                          className="placeholder_div"
+                          id="placeholder_email"
+                        >
+                          <p>E-Mail Address</p>
+                        </div>
+                      )}
+                    </div>
+                    <div className="field_common password_field">
+                      <input
+                        type="password"
+                        value={combine.Password}
+                        className="password_input"
+                        id="password_input"
+                        onChange={handlePassword}
+                      ></input>
+                      {combine.Password === null && (
+                        <div
+                          className="placeholder_div_password"
+                          id="placeholder_password"
+                        >
+                          <p>Password</p>
+                        </div>
+                      )}
                     </div>
                     <div className="field_common login_button">
                       <div class="captcha_div">

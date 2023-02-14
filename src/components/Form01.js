@@ -3,6 +3,16 @@ import Button from "./Button"
 import Compartment01 from './Compartment01'
 
 export default function Form01() {
+
+    const translateX=(e)=>{
+        e.preventDefault()
+        const container = document.getElementById("form_main_container_inner")
+        container.style.transform="translateX(-100vw)"
+        // container.style.zIndex = -1; 
+    
+    }
+    
+
     return (
         <>
             <div className="Form01_main_container">
@@ -35,11 +45,11 @@ export default function Form01() {
                                 </select>
                             </div>
                             <div className="formSubmit">
-                                <Button value="Proceed"></Button>
+                                <Button value="Proceed" funcCall={translateX}></Button>
                             </div>
                         </div>
                     </form>
-                    <div className="Otp_page_end">
+                    <div className="goBackDiv">
                         <button>Go Back</button>
                     </div>
                 </div>

@@ -27,7 +27,7 @@ export default function OtpPage() {
                         </div>
 
                     </div>
-                    <div className="Otp_page_end">
+                    <div className="goBackDiv">
                         <button>Go Back</button>
                     </div>
                 </div>

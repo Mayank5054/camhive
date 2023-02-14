@@ -40,7 +40,7 @@ function Google(){
         // }
   return (
     <>
-    <button onClick={handleCal} className="btn_google" ref={refe}>
+    {/* <button onClick={handleCal} className="btn_google" ref={refe}>
       <div className='btn_div_google'>
         <div className="subdiv01">
           <i className='fa fa-google' id="btn_i_google"></i>
@@ -49,7 +49,7 @@ function Google(){
           <p className='btn_p_google'>Click to sign into Google</p>
         </div>
       </div>
-    </button>
+    </button> */}
     {/* <button onClick={out}>sign out</button> */} 
     </>
   );

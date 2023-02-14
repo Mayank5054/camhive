@@ -105,7 +105,7 @@ const CreateaNewAccount = () =>{
                         </div>
                         <div className="field_common login_button">
                           <div className="compartment02_general login_button_container">
-                            <button className="btn_login_signup">CREATE</button>
+                            <button className="btn_login">CREATE</button>
                           </div>
                         </div>
                       </form>

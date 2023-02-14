@@ -3,6 +3,7 @@ import Button from "./Button";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import GoogleLogin from "./GoogleLogin"
+import Google from "./google";
 const AccessYourAccount = () => {
   var [email, setEmail] = useState(null);
   var [password, setPassword] = useState(null);
@@ -22,8 +23,8 @@ const AccessYourAccount = () => {
   };
   return (
     <div className="compartment02">
-      <div className="compartment02_subpart01">
-        <div className="compartment02_subpart02 compartment02_general compartment02_subpart02_login">
+       <div className="compartment02_subpart01">
+       <div className="compartment02_subpart02 compartment02_general compartment02_subpart02_login">
           <div className="compartment02_general compartment02_title compartment02_title_login">
             <p>Access Your Account</p>
           </div>
@@ -69,10 +70,11 @@ const AccessYourAccount = () => {
                     </div>
                     <div className="field_common login_button">
                       <div className="captcha_div">
-                        {/* captcha code should be added here */}
+                        
                       </div>
                       <div className="compartment02_general login_button_container">
                         <button className="btn_login">Login</button>
+                        
                       </div>
                       <div className="needhelp_container">
                         <p>Need Any Help?</p>
@@ -92,7 +94,9 @@ const AccessYourAccount = () => {
               </div>
               <div className="social_media_login">
                 <div className="social_media_login_subpart">
-                <GoogleLogin />
+                <div className="general_social_media google_login">
+                <Google/>
+                </div>
                   <div className="general_social_media facebook_login">
                     <button className="facebook_button">
                       <i className="fa fa-facebook"></i>
@@ -110,7 +114,7 @@ const AccessYourAccount = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
   );
 };

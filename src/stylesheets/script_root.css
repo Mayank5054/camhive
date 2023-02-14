@@ -4,6 +4,10 @@
   --secondary: #944379;
 }
 
+a{
+  text-decoration: none;
+}
+
 @keyframes bouncing_balls {
   0% {
     transform: translate(0%, 0%);
@@ -941,3 +945,28 @@ input[type=file]::file-selector-button:hover {
 }
 /* Form03 css ends */
 /* otp page css ends */
+
+/* google btn css starts  */
+.googleButton{
+  width: 11rem;
+  height: 2.5rem;
+  padding: 3px;
+  background-color: #3F7EE8;
+  border: none;
+  display: flex;
+  font-size: 0.8rem;
+  color: white;
+  cursor: pointer;
+}
+.googleButton img{
+  height: 100%;
+  width: 2rem;
+}
+.googleBtnText{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+/* google btn css ends */

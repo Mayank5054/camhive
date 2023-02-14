@@ -19,6 +19,7 @@ const AccessYourAccount = () => {
       setPassword(null);
     }
   };
+
   return (
     <div className="compartment02">
       <div className="compartment02_subpart01">

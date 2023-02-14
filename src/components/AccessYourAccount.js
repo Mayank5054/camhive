@@ -1,49 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
-import { faSwimmer } from "@fortawesome/free-solid-svg-icons";
-
-
-
-import GoogleLogin from "./GoogleLogin";
-const AccessYourAccount = () => {
-  const HandleSubmit = () => {};
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSwimmer } from "@fortawesome/free-solid-svg-icons";
-
-
-
+import GoogleLogin from "./GoogleLogin"
 const AccessYourAccount = () => {
-
-
-  var [combine,setCombine]=useState({Email:null,Password:null});
-
-  const HandleSubmit = () => {
-
-  };
+  var [email, setEmail] = useState(null);
+  var [password, setPassword] = useState(null);
+  const HandleSubmit = () => {};
+  var inputRef = React.createRef();
   const handleEmail = (e) => {
-    setCombine({
-      ...combine,
-      Email:e.target.value
-    })
+    setEmail(e.target.value);
     if (e.target.value === "") {
-      setCombine({
-        ...combine,
-        Email:null
-      })
+      setEmail(null);
     }
   };
   const handlePassword = (e) => {
-    setCombine({
-      ...combine,
-      Password:e.target.value
-    })
+    setPassword(e.target.value);
     if (e.target.value === "") {
-      setCombine({
-        ...combine,
-        Password:null
-      })
+      setPassword(null);
     }
   };
   return (
@@ -59,26 +33,17 @@ const AccessYourAccount = () => {
                 <div className="login_form_subpart">
                   <form onSubmit={HandleSubmit} id="form">
                     <div className="field_common email_field">
-                      <input type="text" className="email_input"></input>
-                      <div className="placeholder_div">
-                        <p>E-Mail Address</p>
-                      </div>
-                    </div>
-                    <div className="field_common password_field">
-                      <input type="text" className="password_input"></input>
-                      <div className="placeholder_div_password">
-                        <p>Password</p>
-                      </div>
                       <input
                         type="email"
                         className="email_input"
                         id="email_input"
-                        value={combine.Email}
+                        value={email}
                         onChange={handleEmail}
                       ></input>
-                      {combine.Email === null && (
+                      {email === null && (
                         <div
                           className="placeholder_div"
+                          ref={inputRef}
                           id="placeholder_email"
                         >
                           <p>E-Mail Address</p>
@@ -88,12 +53,12 @@ const AccessYourAccount = () => {
                     <div className="field_common password_field">
                       <input
                         type="password"
-                        value={combine.Password}
+                        value={password}
                         className="password_input"
                         id="password_input"
                         onChange={handlePassword}
                       ></input>
-                      {combine.Password === null && (
+                      {password === null && (
                         <div
                           className="placeholder_div_password"
                           id="placeholder_password"
@@ -103,7 +68,7 @@ const AccessYourAccount = () => {
                       )}
                     </div>
                     <div className="field_common login_button">
-                      <div class="captcha_div">
+                      <div className="captcha_div">
                         {/* captcha code should be added here */}
                       </div>
                       <div className="compartment02_general login_button_container">
@@ -127,11 +92,9 @@ const AccessYourAccount = () => {
               </div>
               <div className="social_media_login">
                 <div className="social_media_login_subpart">
-                  <div className="general_social_media google_login">
-                    <GoogleLogin />
-                  </div>
+                <GoogleLogin />
                   <div className="general_social_media facebook_login">
-                    <button class="facebook_button">
+                    <button className="facebook_button">
                       <i className="fa fa-facebook"></i>
                       <p>Login With Facebook</p>
                     </button>
@@ -140,7 +103,7 @@ const AccessYourAccount = () => {
               </div>
             </div>
           </div>
-          <div className=" compartment02_button compartment02_button_login">
+          <div className="ccc_button ccc_button_login">
             <p>Oops ! Don't Have An Account ?</p>
             <Link to="/signup" id="link_for_signup">
               <p>&nbsp;Join Us Now</p>
@@ -151,4 +114,5 @@ const AccessYourAccount = () => {
     </div>
   );
 };
+
 export default AccessYourAccount;

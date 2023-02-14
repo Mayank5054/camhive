@@ -11,14 +11,16 @@ function Google() {
   var CLIENT_ID =
     "934057497734-2k0sp365v94u0u08ta8mv9b4qodkoal6.apps.googleusercontent.com";
   var API_KEY = "AIzaSyBI57Lt2FHhIiXvRZunhEvuqZhmgZ0lHbk";
+    // var CLIENT_ID ="355367033227-g3rr36a02g06lrev47m1fa94nc7k8fle.apps.googleusercontent.com";
+    // var API_KEY = "AIzaSyAR18WEx2u15IrGzRRYgXTslGGRKWwTnoM";
 
-  const SCOPES = "https://mail.google.com/";
+  const SCOPES = "https://mail.google.com/ " + " https://www.googleapis.com/auth/user.birthday.read";
   obj.load("client:auth2", async () => {
     obj.client.init({
       apiKey: API_KEY,
       clientId: CLIENT_ID,
       scope: SCOPES,
-      plugin_name: "Demo",
+      plugin_name: "Grouppo",
     });
   });
   const handleCal = async () => {
@@ -31,12 +33,18 @@ function Google() {
         });
         console.log(data);
         console.log(e);
-        console.log(window.gapi.auth2);
+        // console.log(window.gapi.auth2);
         console.log(e.getAuthResponse());
       });
     }
     const state = await window.gapi.auth2.getAuthInstance().isSignedIn.Oa;
     setLogIn(state);
+
+    var req01=window.gapi.client.people.people.get({
+      'resourceName': 'me',
+            'personFields': 'genders,birthdays',})
+    console.log(req01);
+    req01.execute((e)=>{console.log('reqo1 = ' );console.log(e);})
   };
   // logout functions for expermintal purpose
   // const out =()=>{

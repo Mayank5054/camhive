@@ -138,7 +138,7 @@ display: flex;
   .compartment02_general{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
   }
   .compartment02_title{
      height:15%;
@@ -162,7 +162,7 @@ display: flex;
     height:70%;
      width:100%;
      height:auto;
-     background:blue;
+     /* background:blue; */
      overflow: hidden;
   }
   .compartment02_body_login{
@@ -174,7 +174,7 @@ display: flex;
   }
   .temp{
     height:100%;
-    background:chartreuse;
+    /* background:chartreuse; */
     justify-content: flex-start;
   }
   .temp > p{
@@ -187,7 +187,7 @@ display: flex;
     align-self: flex-start;
     font-weight:500;
   }
-  .compartment02_button{
+  .ccc_button{
     height:15%;
      width:80%;
      /* background:green; */
@@ -195,7 +195,7 @@ display: flex;
      align-items: center;
      justify-content: center;
   }
-  .compartment02_button_login{
+  .ccc_button_login{
     height:5%;
   }
   .button{
@@ -222,6 +222,8 @@ display: flex;
     transform: scale(1.05);
   }
   /* button css ends  */
+
+
   /* access your account css */
   .login_form_divison{
     height:100%;
@@ -252,6 +254,10 @@ display: flex;
   .compartment02_button_login{
     width:76%;
     align-self:flex-start;
+  }
+  .compartment02_button{
+    width:100%;
+    /* background:red; */
   }
   .login_form_subpart{
     height:80%;
@@ -300,12 +306,21 @@ display: flex;
     width:75%;
     border-radius: 7px;
     box-shadow: 0px 1px 5px black;
-    border:none;
     position:relative;
     font-size:17px;
     color:#45215D;
     font-weight: 700;
     padding-left:4%;
+    margin:0%;
+    padding-left:9%;
+    border-color:#45215D;
+    outline:none;
+    border-width:0;
+  }
+  .email_input:focus,.password_input:focus{
+    box-shadow: none;
+    border:3px solid  #45235e;
+    border-style: groove;
   }
   .placeholder_div,.placeholder_div_password{
     height:4%;
@@ -327,9 +342,7 @@ display: flex;
     letter-spacing: 1px;
     word-spacing: 2px
   }
- .placeholder_div:hover{
-  display: none;
- }
+ 
   .placeholder_div_password > p{
     margin: 0%;
     padding: 0%;
@@ -430,7 +443,7 @@ display: flex;
   justify-content: center;
  }
  .general_social_media{
-  height:10%;
+  height:13%;
   width:80%;
   /* background:darkgoldenrod; */
   padding:2%;
@@ -460,17 +473,17 @@ display: flex;
  .facebook_login{
   margin-top:5%;
  }
- .compartment02_button_login > p{
+ .ccc_button_login > p{
   font-size:14px;
   text-transform: capitalize;
   font-weight:700;
   letter-spacing: 0.5px;
   word-spacing: 2px;
  }
- .compartment02_button_login > p:nth-child(1){
+ .ccc_button_login > p:nth-child(1){
   color:#944379;
  }
- .compartment02_button_login > p:nth-child(2){
+ .ccc_button_login > p:nth-child(2){
   font-weight: 1000;
   color:#7A3064;
  }
@@ -481,7 +494,8 @@ display: flex;
   
  }
   
-  /* button css ends  */
+  /* Access Your Account css ends  */
+
   /* otp page css starts  */
 .Otp_Page_main_container{
   color: #944379;

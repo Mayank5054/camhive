@@ -2,24 +2,42 @@ import React, { useState } from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSwimmer } from "@fortawesome/free-solid-svg-icons";
+
+
+
 const AccessYourAccount = () => {
-  var [email, setEmail] = useState(null);
-  var [password, setPassword] = useState(null);
-  const HandleSubmit = () => {};
-  var inputRef = React.createRef();
+
+
+  var [combine,setCombine]=useState({Email:null,Password:null});
+
+  const HandleSubmit = () => {
+
+  };
   const handleEmail = (e) => {
-    setEmail(e.target.value);
+    setCombine({
+      ...combine,
+      Email:e.target.value
+    })
     if (e.target.value === "") {
-      setEmail(null);
+      setCombine({
+        ...combine,
+        Email:null
+      })
     }
   };
   const handlePassword = (e) => {
-    setPassword(e.target.value);
+    setCombine({
+      ...combine,
+      Password:e.target.value
+    })
     if (e.target.value === "") {
-      setPassword(null);
+      setCombine({
+        ...combine,
+        Password:null
+      })
     }
   };
-
   return (
     <div className="compartment02">
       <div className="compartment02_subpart01">
@@ -37,13 +55,12 @@ const AccessYourAccount = () => {
                         type="email"
                         className="email_input"
                         id="email_input"
-                        value={email}
+                        value={combine.Email}
                         onChange={handleEmail}
                       ></input>
-                      {email === null && (
+                      {combine.Email === null && (
                         <div
                           className="placeholder_div"
-                          ref={inputRef}
                           id="placeholder_email"
                         >
                           <p>E-Mail Address</p>
@@ -53,12 +70,12 @@ const AccessYourAccount = () => {
                     <div className="field_common password_field">
                       <input
                         type="password"
-                        value={password}
+                        value={combine.Password}
                         className="password_input"
                         id="password_input"
                         onChange={handlePassword}
                       ></input>
-                      {password === null && (
+                      {combine.Password === null && (
                         <div
                           className="placeholder_div_password"
                           id="placeholder_password"

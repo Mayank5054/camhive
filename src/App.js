@@ -5,6 +5,7 @@ import OtpPage from './components/OtpPage';
 import Form01 from './components/Form01';
 import Form from './components/Form';
 import Login from './components/Login';
+import Signup from './components/Signup';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home01 />} />
+          <Route exact path="/Signup" element={<Signup />} />
           <Route exact path="/otp" element={<OtpPage />} />
           <Route exact path="/form1" element={<Form01 />} />
           <Route exact path="/form" element={<Form />} />
